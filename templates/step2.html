@@ -1,13 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Електро техніка - Крок 2</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   </head>
   <body>
     <div class="container">
@@ -18,21 +15,12 @@
           {% for main in mains %}
           <label class="option-card">
             {# radio buttons мають однакове ім'я (name) для групи, а значення
-            (value) - це ID інгредієнта. Додано 'checked' для збереження
-            попереднього вибору #}
+               (value) - це ID інгредієнта. Додано 'checked' для збереження попереднього вибору #}
             <input
               type="radio"
               name="main"
               value="{{ main.id }}"
-              {%
-              if
-              selected_main_id
-              and
-              selected_main_id=""
-              ="main.id"
-              %}checked{%
-              endif
-              %}
+              {% if selected_main_id and selected_main_id == main.id %}checked{% endif %}
               required
             />
             <div class="card-content">
