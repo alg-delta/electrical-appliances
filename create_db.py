@@ -56,5 +56,6 @@ def create_db():
         # Зберігаємо всі зміни з черги (сесії) у БД
         db.session.commit()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     create_db()
+    print("Базу даних успішно ініціалізовано!")
