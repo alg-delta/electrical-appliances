@@ -23,24 +23,12 @@
               class="dop-checkbox"
               name="dop"
               value="{{ dop.id }}"
-              {%
-              if
-              selected_dop_ids
-              and
-              dop.id
-              in
-              selected_dop_ids
-              %}checked{%
-              endif
-              %}
+              {% if selected_dop_ids and dop.id in selected_dop_ids %}checked{% endif %}
             />
             <div class="card-content">
-              <!--                            <img src="{{ url_for('static', filename=dop.image) }}"-->
-              <!--                                 alt="{{ dop.name }}"-->
-              <!--                                 class="option-image">-->
+
               <h3>{{ dop.name }}</h3>
-              <!--                            <p class="price">${{ "%.2f"|format(dop.price) }}</p>-->
-              <!-- кількість -->
+
             </div>
           </label>
           {% endfor %}

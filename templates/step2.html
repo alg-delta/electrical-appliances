@@ -24,14 +24,7 @@
               type="radio"
               name="main"
               value="{{ main.id }}"
-              {%
-              if
-              selected_main_id
-              and
-              selected_main_id="main.id"
-              %}checked{%
-              endif
-              %}
+              {% if selected_main_id and selected_main_id="main.id" %}checked{% endif %}
               required
             />
             <div class="card-content">
