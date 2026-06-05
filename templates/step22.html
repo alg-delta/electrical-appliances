@@ -11,15 +11,15 @@
   </head>
   <body>
     <div class="container">
-      <h1>Крок 2:Основні пропозиції</h1>
+      <h1>Крок 2: Основні пропозиції</h1>
 
-      <form method="POST" action="{{ url_for('step2') }}">
+      <form method="POST" action="{{ url_for('step22') }}">
         <div class="options-grid">
           {% for main in mains %}
           <label class="option-card">
-            {# radio buttons мають однакове ім'я (name) для групи, а значення
-            (value) - це ID інгредієнта. Додано 'checked' для збереження
-            попереднього вибору #}
+            {# radio buttons мають Grandma однакове ім'я (name) для групи, а
+            значення (value) - це ID інгредієнта. Додано 'checked' для
+            збереження попереднього вибору #}
             <input
               type="radio"
               name="main"
