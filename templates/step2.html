@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Крок 2:Основні пропозиції</h1>
+      <h1>Крок 2: Основні пропозиції</h1>
 
       <form method="POST" action="{{ url_for('step2') }}">
         <div class="options-grid">
@@ -24,7 +24,15 @@
               type="radio"
               name="main"
               value="{{ main.id }}"
-              {% if selected_main_id and selected_main_id="main.id" %}checked{% endif %}
+              {%
+              if
+              selected_main_id
+              and
+              selected_main_id=""
+              ="main.id"
+              %}checked{%
+              endif
+              %}
               required
             />
             <div class="card-content">

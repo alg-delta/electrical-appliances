@@ -17,14 +17,22 @@
         <div class="options-grid">
           {% for main in mains %}
           <label class="option-card">
-            {# radio buttons мають Grandma однакове ім'я (name) для групи, а
-            значення (value) - це ID інгредієнта. Додано 'checked' для
-            збереження попереднього вибору #}
+            {# radio buttons мають однакове ім'я (name) для групи, а значення
+            (value) - це ID інгредієнта. Додано 'checked' для збереження
+            попереднього вибору #}
             <input
               type="radio"
               name="main"
               value="{{ main.id }}"
-              {% if selected_main_id and selected_main_id="main.id" %}checked{% endif %}
+              {%
+              if
+              selected_main_id
+              and
+              selected_main_id=""
+              ="main.id"
+              %}checked{%
+              endif
+              %}
               required
             />
             <div class="card-content">
